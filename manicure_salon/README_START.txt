@@ -1,21 +1,29 @@
-Как запустить проект:
+Как запустить проект Beauty Nails Tula
 
-1. Откройте папку LR5/manicure_salon в VS Code.
-2. Активируйте окружение из корневой папки LR5:
-   source venv/Scripts/activate
-3. Перейдите в папку проекта:
-   cd manicure_salon
+1. Перейдите в папку проекта:
+   cd D:/Web/LR5/manicure_salon
+
+2. Активируйте виртуальное окружение:
+   source ../venv/Scripts/activate
+
+3. Установите зависимости, если нужно:
+   pip install -r requirements.txt
+
 4. Выполните миграции:
    python manage.py migrate
+
 5. Запустите сервер:
    python manage.py runserver
-6. Откройте в браузере:
+
+6. Откройте сайт:
    http://127.0.0.1:8000/
 
 Страницы сайта:
-/ — главная
-/services/ — услуги
-/masters/ — мастера
-/booking/ — запись
-/contacts/ — контакты
-/admin/ — админ-панель
+- /
+- /services/
+- /masters/
+- /booking/
+- /contacts/
+
+Задачи по Python находятся в папке:
+../python_tasks/

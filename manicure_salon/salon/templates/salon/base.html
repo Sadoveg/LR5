@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Beauty Nails{% endblock %}</title>
+    <title>{% block title %}Beauty Nails Tula{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'salon/style.css' %}">
 </head>
 <body>
 <header class="header">
-    <a class="logo" href="{% url 'salon:home' %}">Beauty Nails</a>
+    <a class="logo" href="{% url 'salon:home' %}">Beauty Nails <span>Tula</span></a>
     <nav>
         <a href="{% url 'salon:home' %}">Главная</a>
         <a href="{% url 'salon:services' %}">Услуги</a>
@@ -22,7 +22,8 @@
     {% block content %}{% endblock %}
 </main>
 <footer class="footer">
-    <p>© 2026 Beauty Nails — маникюрный салон</p>
+    <p>© 2026 Beauty Nails Tula — маникюрный салон</p>
+    <p>г. Тула, ул. Цветочная, 10 · +7 999 123-45-67</p>
 </footer>
 </body>
 </html>

@@ -1,27 +1,34 @@
 {% extends 'salon/base.html' %}
-{% block title %}Запись — Beauty Nails{% endblock %}
+{% block title %}Запись — Beauty Nails Tula{% endblock %}
 {% block content %}
 <section class="page-title">
+    <p class="label">Онлайн-заявка</p>
     <h1>Запись на маникюр</h1>
-    <p>Оставьте заявку по телефону или напишите администратору.</p>
+    <p>Оставьте заявку или позвоните администратору. Форма демонстрационная: она показывает, как может выглядеть страница записи в Django-проекте.</p>
 </section>
 <div class="booking">
-    <div class="card">
+    <div class="card info-card">
         <h3>Контакты для записи</h3>
         <p><b>Телефон:</b> +7 999 123-45-67</p>
         <p><b>Время работы:</b> ежедневно 10:00–20:00</p>
-        <p><b>Адрес:</b> г. Москва, ул. Цветочная, 10</p>
+        <p><b>Адрес:</b> г. Тула, ул. Цветочная, 10</p>
+        <p><b>Instagram:</b> @beauty_nails_tula</p>
     </div>
     <form class="form">
-        <input type="text" placeholder="Ваше имя">
-        <input type="tel" placeholder="Телефон">
-        <select>
-            <option>Маникюр с покрытием</option>
-            <option>Классический маникюр</option>
-            <option>Дизайн ногтей</option>
-        </select>
+        <label>Ваше имя<input type="text" placeholder="Например, Анастасия"></label>
+        <label>Телефон<input type="tel" placeholder="+7 999 000-00-00"></label>
+        <label>Услуга
+            <select>
+                <option>Маникюр с покрытием</option>
+                <option>Классический маникюр</option>
+                <option>Укрепление ногтей</option>
+                <option>Дизайн ногтей</option>
+                <option>SPA-уход для рук</option>
+            </select>
+        </label>
+        <label>Желаемая дата<input type="date"></label>
         <button type="button">Отправить заявку</button>
-        <small>Форма демонстрационная для лабораторной работы.</small>
+        <small>Форма создана для демонстрации в лабораторной работе.</small>
     </form>
 </div>
 {% endblock %}

@@ -1,29 +1,58 @@
 {% extends 'salon/base.html' %}
-{% block title %}Главная — Beauty Nails{% endblock %}
+{% block title %}Главная — Beauty Nails Tula{% endblock %}
 {% block content %}
 <section class="hero">
-    <div>
-        <p class="label">Маникюрный салон</p>
-        <h1>Красивые ногти и аккуратный уход за руками</h1>
-        <p class="hero-text">Beauty Nails — уютный салон, где делают классический маникюр, покрытие гель-лаком, укрепление и дизайн ногтей.</p>
-        <a class="button" href="{% url 'salon:booking' %}">Записаться</a>
+    <div class="hero-content">
+        <p class="label">Маникюрный салон в Туле</p>
+        <h1>Идеальный маникюр, уютная атмосфера и забота о каждой детали</h1>
+        <p class="hero-text">Beauty Nails Tula — современный салон маникюра, где создают аккуратное покрытие, укрепление, дизайн ногтей и SPA-уход для рук.</p>
+        <div class="hero-actions">
+            <a class="button" href="{% url 'salon:booking' %}">Записаться онлайн</a>
+            <a class="button secondary" href="{% url 'salon:services' %}">Посмотреть услуги</a>
+        </div>
     </div>
     <div class="hero-card">
-        <h3>Сегодня доступно</h3>
-        <p>Маникюр с покрытием</p>
+        <p class="label">Популярно сегодня</p>
+        <h3>Маникюр с покрытием</h3>
         <strong>от 2000 ₽</strong>
+        <p>Свободные окна: 12:00, 15:30, 18:00</p>
     </div>
 </section>
 
 <section class="section">
-    <h2>Популярные услуги</h2>
+    <div class="section-heading">
+        <p class="label">Почему выбирают нас</p>
+        <h2>Красиво, безопасно и удобно</h2>
+    </div>
+    <div class="features">
+        {% for item in advantages %}
+        <div class="feature">✓ {{ item }}</div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="section alt">
+    <div class="section-heading">
+        <p class="label">Услуги</p>
+        <h2>Популярные процедуры</h2>
+    </div>
     <div class="cards">
         {% for service in services_preview %}
         <div class="card">
             <h3>{{ service.title }}</h3>
-            <p>{{ service.price }}</p>
+            <p>{{ service.description }}</p>
+            <strong>{{ service.price }}</strong>
         </div>
         {% endfor %}
     </div>
+</section>
+
+<section class="promo">
+    <div>
+        <p class="label">Акция месяца</p>
+        <h2>Скидка 10% на первое посещение</h2>
+        <p>Назовите администратору промокод <b>BEAUTY10</b> при записи.</p>
+    </div>
+    <a class="button" href="{% url 'salon:booking' %}">Записаться</a>
 </section>
 {% endblock %}
