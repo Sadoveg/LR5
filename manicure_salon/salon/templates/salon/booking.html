@@ -1,0 +1,27 @@
+{% extends 'salon/base.html' %}
+{% block title %}Запись — Beauty Nails{% endblock %}
+{% block content %}
+<section class="page-title">
+    <h1>Запись на маникюр</h1>
+    <p>Оставьте заявку по телефону или напишите администратору.</p>
+</section>
+<div class="booking">
+    <div class="card">
+        <h3>Контакты для записи</h3>
+        <p><b>Телефон:</b> +7 999 123-45-67</p>
+        <p><b>Время работы:</b> ежедневно 10:00–20:00</p>
+        <p><b>Адрес:</b> г. Москва, ул. Цветочная, 10</p>
+    </div>
+    <form class="form">
+        <input type="text" placeholder="Ваше имя">
+        <input type="tel" placeholder="Телефон">
+        <select>
+            <option>Маникюр с покрытием</option>
+            <option>Классический маникюр</option>
+            <option>Дизайн ногтей</option>
+        </select>
+        <button type="button">Отправить заявку</button>
+        <small>Форма демонстрационная для лабораторной работы.</small>
+    </form>
+</div>
+{% endblock %}

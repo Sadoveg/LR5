@@ -1,0 +1,20 @@
+{% extends 'salon/base.html' %}
+{% block title %}Услуги — Beauty Nails{% endblock %}
+{% block content %}
+<section class="page-title">
+    <h1>Услуги салона</h1>
+    <p>Выберите услугу и удобное время для записи.</p>
+</section>
+<div class="list">
+    {% for service in services %}
+    <div class="list-item">
+        <div>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+            <span>{{ service.time }}</span>
+        </div>
+        <strong>{{ service.price }}</strong>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

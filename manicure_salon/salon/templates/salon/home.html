@@ -1,0 +1,29 @@
+{% extends 'salon/base.html' %}
+{% block title %}Главная — Beauty Nails{% endblock %}
+{% block content %}
+<section class="hero">
+    <div>
+        <p class="label">Маникюрный салон</p>
+        <h1>Красивые ногти и аккуратный уход за руками</h1>
+        <p class="hero-text">Beauty Nails — уютный салон, где делают классический маникюр, покрытие гель-лаком, укрепление и дизайн ногтей.</p>
+        <a class="button" href="{% url 'salon:booking' %}">Записаться</a>
+    </div>
+    <div class="hero-card">
+        <h3>Сегодня доступно</h3>
+        <p>Маникюр с покрытием</p>
+        <strong>от 2000 ₽</strong>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Популярные услуги</h2>
+    <div class="cards">
+        {% for service in services_preview %}
+        <div class="card">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.price }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

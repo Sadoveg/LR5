@@ -1,0 +1,18 @@
+{% extends 'salon/base.html' %}
+{% block title %}Мастера — Beauty Nails{% endblock %}
+{% block content %}
+<section class="page-title">
+    <h1>Наши мастера</h1>
+    <p>Опытные специалисты, которые помогут подобрать форму, цвет и дизайн.</p>
+</section>
+<div class="cards">
+    {% for master in masters %}
+    <div class="card master">
+        <div class="avatar">{{ master.name|first }}</div>
+        <h3>{{ master.name }}</h3>
+        <p>Опыт: {{ master.experience }}</p>
+        <p>{{ master.specialization }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Beauty Nails{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'salon/style.css' %}">
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="{% url 'salon:home' %}">Beauty Nails</a>
+    <nav>
+        <a href="{% url 'salon:home' %}">Главная</a>
+        <a href="{% url 'salon:services' %}">Услуги</a>
+        <a href="{% url 'salon:masters' %}">Мастера</a>
+        <a href="{% url 'salon:booking' %}">Запись</a>
+        <a href="{% url 'salon:contacts' %}">Контакты</a>
+    </nav>
+</header>
+<main>
+    {% block content %}{% endblock %}
+</main>
+<footer class="footer">
+    <p>© 2026 Beauty Nails — маникюрный салон</p>
+</footer>
+</body>
+</html>
